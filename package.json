@@ -1,0 +1,45 @@
+{
+  "name": "gnucash",
+  "version": "0.0.0",
+  "description": "Access library for GnuCash ledgers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.6",
+    "@types/xml2js": "^0.4.4",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.17.1",
+    "typescript": "^3.5.1"
+  },
+  "author": "Philipp Jardas <philipp@jardas.de>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phjardas/gnucash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phjardas/gnucash/issues"
+  },
+  "homepage": "https://github.com/phjardas/gnucash#readme",
+  "keywords": [
+    "gnucash"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
